@@ -12,32 +12,26 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Student.Title)
+            @Html.DisplayNameFor(model => model.Student.Hovaten)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Student.Title)
+            @Html.DisplayFor(model => model.Student.Hovaten)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Student.ReleaseDate)
+            @Html.DisplayNameFor(model => model.Student.Ngaysinh)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Student.ReleaseDate)
+            @Html.DisplayFor(model => model.Student.Ngaysinh)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Student.Genre)
+            @Html.DisplayNameFor(model => model.Student.Gioitinh)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Student.Genre)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Student.Price)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Student.Price)
+            @Html.DisplayFor(model => model.Student.Gioitinh)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Student.ID">Edit</a> |
+    <a asp-page="./Edit" asp-route-id="@Model.Student.StudentID">Edit</a> |
     <a asp-page="./Index">Back to List</a>
 </div>

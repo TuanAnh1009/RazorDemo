@@ -5,12 +5,11 @@ namespace RazorPagesMovie.Models
 {
     public class Student
     {
-        public int ID { get; set; }
-        public string Title { get; set; }
+        public int StudentID { get; set; }
+        public string Hovaten { get; set; }
 
         [DataType(DataType.Date)]
-        public DateTime ReleaseDate { get; set; }
-        public string Genre { get; set; }
-        public decimal Price { get; set; }
+        public DateTime Ngaysinh { get; set; }
+        public string Gioitinh { get; set; }
     }
 }

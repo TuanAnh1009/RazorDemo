@@ -29,7 +29,7 @@ namespace RazorPagesMovie.Pages_Students
                 return NotFound();
             }
 
-            Student = await _context.Student.FirstOrDefaultAsync(m => m.ID == id);
+            Student = await _context.Student.FirstOrDefaultAsync(m => m.StudentID == id);
 
             if (Student == null)
             {
@@ -55,7 +55,7 @@ namespace RazorPagesMovie.Pages_Students
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!StudentExists(Student.ID))
+                if (!StudentExists(Student.StudentID))
                 {
                     return NotFound();
                 }
@@ -70,7 +70,7 @@ namespace RazorPagesMovie.Pages_Students
 
         private bool StudentExists(int id)
         {
-            return _context.Student.Any(e => e.ID == id);
+            return _context.Student.Any(e => e.StudentID == id);
         }
     }
 }

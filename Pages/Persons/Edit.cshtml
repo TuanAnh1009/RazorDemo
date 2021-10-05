@@ -15,9 +15,19 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Person.PersonID" />
             <div class="form-group">
-                <label asp-for="Person.Ten" class="control-label"></label>
-                <input asp-for="Person.Ten" class="form-control" />
-                <span asp-validation-for="Person.Ten" class="text-danger"></span>
+                <label asp-for="Person.Hovaten" class="control-label"></label>
+                <input asp-for="Person.Hovaten" class="form-control" />
+                <span asp-validation-for="Person.Hovaten" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Person.Gioitinh" class="control-label"></label>
+                <input asp-for="Person.Gioitinh" class="form-control" />
+                <span asp-validation-for="Person.Gioitinh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Person.Tuoi" class="control-label"></label>
+                <input asp-for="Person.Tuoi" class="form-control" />
+                <span asp-validation-for="Person.Tuoi" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

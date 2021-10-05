@@ -2,14 +2,16 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace RazorPagesMovie.Migrations
 {
     [DbContext(typeof(RazorPagesMovieContext))]
-    partial class RazorPagesMovieContextModelSnapshot : ModelSnapshot
+    [Migration("20211005130501_EmplyeeDatabase")]
+    partial class EmplyeeDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,26 +38,6 @@ namespace RazorPagesMovie.Migrations
                     b.HasKey("EmployeeID");
 
                     b.ToTable("Employee");
-                });
-
-            modelBuilder.Entity("RazorPagesMovie.Models.Lecture", b =>
-                {
-                    b.Property<int>("LectureID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Noidung")
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("Sotiet")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Tenmonhoc")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("LectureID");
-
-                    b.ToTable("Lecture");
                 });
 
             modelBuilder.Entity("RazorPagesMovie.Models.Movie", b =>

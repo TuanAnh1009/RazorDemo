@@ -29,7 +29,7 @@ namespace RazorPagesMovie.Pages_Employees
                 return NotFound();
             }
 
-            Employee = await _context.Employee.FirstOrDefaultAsync(m => m.ID == id);
+            Employee = await _context.Employee.FirstOrDefaultAsync(m => m.EmployeeID == id);
 
             if (Employee == null)
             {
@@ -55,7 +55,7 @@ namespace RazorPagesMovie.Pages_Employees
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!EmployeeExists(Employee.ID))
+                if (!EmployeeExists(Employee.EmployeeID))
                 {
                     return NotFound();
                 }
@@ -70,7 +70,7 @@ namespace RazorPagesMovie.Pages_Employees
 
         private bool EmployeeExists(int id)
         {
-            return _context.Employee.Any(e => e.ID == id);
+            return _context.Employee.Any(e => e.EmployeeID == id);
         }
     }
 }

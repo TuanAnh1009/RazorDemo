@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Models;
 
-namespace RazorPagesMovie.Pages_Lectures
+namespace RazorPagesMovie.Pages_lectures
 {
     public class EditModel : PageModel
     {
@@ -29,7 +29,7 @@ namespace RazorPagesMovie.Pages_Lectures
                 return NotFound();
             }
 
-            Lecture = await _context.Lecture.FirstOrDefaultAsync(m => m.ID == id);
+            Lecture = await _context.Lecture.FirstOrDefaultAsync(m => m.LectureID == id);
 
             if (Lecture == null)
             {
@@ -55,7 +55,7 @@ namespace RazorPagesMovie.Pages_Lectures
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!LectureExists(Lecture.ID))
+                if (!LectureExists(Lecture.LectureID))
                 {
                     return NotFound();
                 }
@@ -70,7 +70,7 @@ namespace RazorPagesMovie.Pages_Lectures
 
         private bool LectureExists(int id)
         {
-            return _context.Lecture.Any(e => e.ID == id);
+            return _context.Lecture.Any(e => e.LectureID == id);
         }
     }
 }

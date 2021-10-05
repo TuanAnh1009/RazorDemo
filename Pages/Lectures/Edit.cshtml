@@ -1,5 +1,5 @@
 @page
-@model RazorPagesMovie.Pages_Lectures.EditModel
+@model RazorPagesMovie.Pages_lectures.EditModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -13,26 +13,21 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Lecture.ID" />
+            <input type="hidden" asp-for="Lecture.LectureID" />
             <div class="form-group">
-                <label asp-for="Lecture.Title" class="control-label"></label>
-                <input asp-for="Lecture.Title" class="form-control" />
-                <span asp-validation-for="Lecture.Title" class="text-danger"></span>
+                <label asp-for="Lecture.Tenmonhoc" class="control-label"></label>
+                <input asp-for="Lecture.Tenmonhoc" class="form-control" />
+                <span asp-validation-for="Lecture.Tenmonhoc" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Lecture.ReleaseDate" class="control-label"></label>
-                <input asp-for="Lecture.ReleaseDate" class="form-control" />
-                <span asp-validation-for="Lecture.ReleaseDate" class="text-danger"></span>
+                <label asp-for="Lecture.Sotiet" class="control-label"></label>
+                <input asp-for="Lecture.Sotiet" class="form-control" />
+                <span asp-validation-for="Lecture.Sotiet" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Lecture.Genre" class="control-label"></label>
-                <input asp-for="Lecture.Genre" class="form-control" />
-                <span asp-validation-for="Lecture.Genre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Lecture.Price" class="control-label"></label>
-                <input asp-for="Lecture.Price" class="form-control" />
-                <span asp-validation-for="Lecture.Price" class="text-danger"></span>
+                <label asp-for="Lecture.Noidung" class="control-label"></label>
+                <input asp-for="Lecture.Noidung" class="form-control" />
+                <span asp-validation-for="Lecture.Noidung" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

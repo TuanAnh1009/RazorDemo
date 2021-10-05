@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Models;
 
-namespace RazorPagesMovie.Pages_Lectures
+namespace RazorPagesMovie.Pages_lectures
 {
     public class DetailsModel : PageModel
     {
@@ -27,7 +27,7 @@ namespace RazorPagesMovie.Pages_Lectures
                 return NotFound();
             }
 
-            Lecture = await _context.Lecture.FirstOrDefaultAsync(m => m.ID == id);
+            Lecture = await _context.Lecture.FirstOrDefaultAsync(m => m.LectureID == id);
 
             if (Lecture == null)
             {

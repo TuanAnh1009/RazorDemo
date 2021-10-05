@@ -5,12 +5,11 @@ namespace RazorPagesMovie.Models
 {
     public class Lecture
     {
-        public int ID { get; set; }
-        public string Title { get; set; }
-
-        [DataType(DataType.Date)]
-        public DateTime ReleaseDate { get; set; }
-        public string Genre { get; set; }
-        public decimal Price { get; set; }
+        public int LectureID { get; set; }
+        
+        public string Tenmonhoc { get; set; }
+        public decimal Sotiet { get; set; }
+        public string Noidung { get; set; }
+        
     }
 }

@@ -26,7 +26,7 @@ namespace RazorPagesMovie
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-        if (Environment.IsDevelopment())
+            if (Environment.IsDevelopment())
         {
             services.AddDbContext<RazorPagesMovieContext>(options =>
             options.UseSqlite(
@@ -38,9 +38,9 @@ namespace RazorPagesMovie
             options.UseSqlServer(
                 Configuration.GetConnectionString("MovieContext")));
         }
+            services.AddRazorPages();
 
-        services.AddRazorPages();
-    }
+        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
