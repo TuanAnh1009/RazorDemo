@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Models;
-
+using RazorPagesMovie.Data;
+namespace RazorPagesMovie.Data
+{
     public class RazorPagesMovieContext : DbContext
     {
         public RazorPagesMovieContext (DbContextOptions<RazorPagesMovieContext> options)
@@ -22,3 +24,5 @@ using RazorPagesMovie.Models;
 
         public DbSet<RazorPagesMovie.Models.Lecture> Lecture { get; set; }
     }
+    
+}
